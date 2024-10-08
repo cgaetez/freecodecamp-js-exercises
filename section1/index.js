@@ -1,16 +1,15 @@
 let counterEl = document.getElementById("counter-el");
-
-let count = 0;
 let storeData = document.getElementById('store-data');
+let count = 0;
 
 function increment(){
-    count = count + 1;
-    counterEl.textContent = count;
+    counterEl.textContent = ++count;
 }
 
 function save(){
-    storeData.textContent += count + ' - ';
+    storeData.textContent += `${count}   -  `;
     count = 0;
+    counterEl.textContent = count;
 }
 
 
