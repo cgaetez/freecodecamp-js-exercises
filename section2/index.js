@@ -1,33 +1,22 @@
-
- 
-
-function Add(){
-    let num1 = document.getElementById("num1").value;
-    let num2 = document.getElementById("num2").value;
+function calculator(operation){
+    let num1 = parseFloat(document.getElementById("num1").value);
+    let num2 = parseFloat(document.getElementById("num2").value);
     let result = document.getElementById('result');
-    result.innerText = parseInt(num1) + parseInt(num2);
-}
 
-function Substract(){
-    let num1 = document.getElementById("num1").value;
-    let num2 = document.getElementById("num2").value;
-    let result = document.getElementById('result');
-    result.innerText = parseInt(num1) - parseInt(num2);
+    switch(operation){
+        case 'add':
+            result.innerText = num1 + num2 ;
+        break;
+        case 'substract':
+            result.innerText = num1 - num2;
+        break;
+        case 'multiply':
+            result.innerText = num1 * num2;
+        break;
+        case 'divide':
+            result.innerText = num1 / num2;
+        break;
+    }
 }
-
-function Multiply(){
-    let num1 = document.getElementById("num1").value;
-    let num2 = document.getElementById("num2").value;
-    let result = document.getElementById('result');
-    result.innerText = parseInt(num1) * parseInt(num2);
-}
-
-function Divide(){
-    let num1 = document.getElementById("num1").value;
-    let num2 = document.getElementById("num2").value;
-    let result = document.getElementById('result');
-    result.innerText = parseInt(num1) / parseInt(num2);
-}
-
 
 
